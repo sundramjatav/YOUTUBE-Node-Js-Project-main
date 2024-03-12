@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube - Login</title>
+    <link rel="shortcut icon" href="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Full-Color-Logo.wine.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style/login-register.css">
+</head>
+<body>
+    <div id="main" class="login">
+        <img class="logo" style="margin-top: 70px;" src="https://www.logo.wine/a/logo/YouTube/YouTube-Logo.wine.svg" alt="">
+        <div class="card">
+            <h1>Login to Youtube</h1>
+            <form action="" method="post">
+                <input type="email" placeholder="Enter email address" name="email">
+                <input type="password" placeholder="Password" name="password">
+                <button>Login</button>
+            </form>
+            <% if(typeof message !== "undefined"){%>
+                <span style="color: red; font-weight: 500;"><%= message%></span>
+            <% }%>
+            <p><a href="#">Forgotten account?</a> <a href="/registration">Sign up for Youtube</a></p>
+        </div>
+
+        <!-- // account delete -->
+        <% if(typeof account !== "undefined"){%>
+            <span class="account" style="color: red; font-weight: 500;display: none;" data-account=""><%= account%></span>
+        <% }%>
+    </div>
+
+    <script>
+       alert(document.querySelector(".account").textContent)
+    </script>
+</body>
+</html>

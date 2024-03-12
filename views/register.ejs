@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube - Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Full-Color-Logo.wine.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style/login-register.css">
+</head>
+<body>
+    <div id="main" class="register">
+        <img class="logo" src="https://www.logo.wine/a/logo/YouTube/YouTube-Logo.wine.svg" alt="">
+        <div class="card">
+            <h1>Create a new account <span>It's quick and easy.</span></h1>
+            <form action="/registration" class="form-register" method="post" enctype="multipart/form-data">
+                <div class="profile-box">
+                    <div class="profile-img">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3177/3177440.png" alt="">
+                        <i class="ri-image-add-fill"></i>
+                    </div>
+
+                    <input style="display: none;" class="profile-input" type="file" name="profile">
+                </div>
+                <input type="text" placeholder="First name" name="first">
+                <input type="text" placeholder="Surname" name="surname">
+                <input type="text" placeholder="Username" name="username">
+                <input type="email" placeholder="Enter email address" name="email">
+                <input type="tel" placeholder="Mobile" name="mobile">
+                <!-- <input type="date" placeholder="DOB" name="dob"> -->
+                <input type="password" placeholder="New password" name="password">
+                <button>Sign Up</button>
+            </form>
+            <% if(typeof message !== "undefined"){%>
+                <span style="color: red; font-weight: 500;"><%= message%></span>
+            <% }%>
+            <p><a href="/" class="link-a">Login for Youtube</a></p>
+            <a href="" class="google"><img src="https://www.svgrepo.com/show/303108/google-icon-logo.svg" alt=""> Sign up with Goolge</a>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector(".ri-image-add-fill").addEventListener("click",()=>{
+            document.querySelector(".profile-input").click();
+        })
+        document.querySelector(".profile-input").addEventListener("change",()=>{
+            document.querySelector(".profile-img img").style.border = '1.5px solid gray';
+            document.querySelector(".profile-img img").src = URL.createObjectURL(document.querySelector(".profile-input").files[0])
+        })
+    </script>
+</body>
+</html>

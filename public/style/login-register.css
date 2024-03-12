@@ -1,0 +1,198 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+    padding-bottom: 40px;
+    /* height: 100vh; */
+}
+.register{
+    padding-bottom: 20px;
+}.login{
+    padding-bottom: 80px;
+}
+.logo{
+    width: 30%;
+    height: 20vh;
+}
+.card{
+    width: 400px;
+    /* height: 300px; */
+    box-shadow: 0 0 10px rgb(224, 224, 224);
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 8px;
+}
+.card h1{
+    font-weight: 600;
+    font-size: 1.4vmax;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.card h1 span{
+    font-size: 1vmax;
+    margin-top: 5px;
+    font-weight: 400;
+    color: rgb(90, 90, 90);
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input{
+    padding: 12px 10px;
+    font-size: 1.05vmax;
+    font-weight: 400;
+    color: rgb(69, 69, 69);
+    outline: none;
+    border: 1.5px solid rgb(207, 207, 207);
+    border-radius: 5px;
+}
+button{
+    padding: 10px;
+    font-weight: 600;
+    font-size: 1.2vmax;
+    background-color: #EB4335;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+p{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+a{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1vmax;
+    color: #1877F2;
+}
+p .link-a:hover{
+    text-decoration: underline;
+}
+.google{
+    /* height: 40px; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgb(237, 237, 237);
+    white-space: nowrap;
+    box-shadow: 0 0 5px rgb(193, 193, 193);
+    color: rgb(63, 63, 63);
+    border-radius: 3px;
+
+    cursor: pointer;
+}
+.google img{
+    width: 20px;
+}
+.profile-box{
+    width: 100%;
+    position: relative;
+}
+.profile-img{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    margin: 0 auto;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    /* background-color: #1877F2; */
+    /* border: 1.5px solid gray; */
+    object-position: center;
+}
+.profile-img .ri-image-add-fill{
+    position: absolute;
+    bottom: 2px;
+    color: rgb(54, 54, 54);
+    right: 2px;
+    font-size: 1.3vmax;
+}
+
+
+/* // responsive  */
+@media (min-width:320px) and (max-width:480px){
+    .register{
+        padding-bottom: 20px;
+    }.login{
+        padding-bottom: 80px;
+    }
+    .logo{
+        width: 100%;
+    }
+    .card{
+        width: 340px;
+        box-shadow: 0 0 0px rgb(232, 232, 232);
+    }
+    .card h1{
+        font-weight: 600;
+        font-size:3vmax;
+    }
+    .card h1 span{
+        font-size: 1.5vmax;
+    }
+    input{
+        font-size: 2vmax;
+        border: 1px solid rgb(207, 207, 207);
+        border-radius: 3px;
+    }
+    button{
+        font-weight: 700;
+        font-size: 2vmax;
+        border-radius: 3px;
+    }
+    p{
+        gap: 10px;
+    }
+    a{
+        font-size: 1.6vmax;
+    }
+    .profile-img{
+        width: 100px;
+        height: 100px;
+    }
+    .profile-img img{
+        object-position: center;
+    }
+    .profile-img .ri-image-add-fill{
+        bottom: 3px;
+        right: 3px;
+        font-size: 2.5vmax;
+    }
+    
+}

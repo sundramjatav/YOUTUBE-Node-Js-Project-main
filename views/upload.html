@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+    <div id="cover">
+        <div class="upload-container">
+            <div class="upload-container-nav">
+                <h3 class="upload-nav">Upload videos</h3>
+                <div class="upload-nav-right">
+                    <i class="ri-feedback-line"></i>
+                    <i class="ri-close-fill"></i>
+                </div>
+            </div>
+            <div class="upload-container-box">
+                <i class="ri-upload-fill"></i>
+                <h4>Drag and drop video files to upload</h4>
+                <h6>Your videos will be private until you publish them.</h6>
+                <button>select files</button>
+            </div>
+            <div class="upload-container-bottom">
+                <p>By submitting your videos to YouTube, you acknowledge that you agree to YouTube's <a href="#">Terms of Service</a> and <a href="#">Community Guidelines</a>.</p>
+                <p>Please make sure that you do not violate others' copyright or privacy rights. <a href="#">Learn more</a></p>
+            </div>
+            <form class="upload-container-show">
+                <div class="upload-container-nav">
+                    <h3 class="upload-nav">Upload videos</h3>
+                    <div class="upload-nav-right">
+                        <i class="ri-feedback-line"></i>
+                        <i class="ri-close-fill close-btn"></i>
+                    </div>
+                </div>
+                <div class="upload-container-show-box">
+                    <div class="upload-container-show-box-left">
+                        <h2>Details</h2>
+                        <input type="file" class="upload-input upload-input-item upload-inp-video" name="video" accept="video/mp4,video/mkv" required>
+                        <input type="file" class="upload-input upload-input-item upload-inp-img" name="poster" accept="image/jpg,image/jpeg,image/png" required>
+                        <input type="text" class="upload-input" placeholder="Title" name="title" required>
+                        <textarea name="description" cols="30" rows="100" class="upload-input" placeholder="Description" required></textarea>
+                        <h4>Thumbnail</h4>
+                        <div class="img-button upload-input-image">
+                            <i class="ri-image-add-line"></i>
+                            <h6>Upload thumbnail</h6>
+                        </div>
+                    </div>
+                    <div class="upload-container-show-box-right">
+                        <video src="" controls class="video-src"></video>
+                        <div class="img">
+                            <img class="poster-img" src="" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="upload-container-show-bottom">
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="upload.js"></script>
+</body>
+</html>
